@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+body {
+    line-height: 1.6;
+    color: #333;
+    background-color: black ;
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.header {
+    text-align: center;
+    color: rgb(229, 196, 8);
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    color: golden;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+.laptop-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding:10px;
+}
+
+.laptop-item {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.laptop-item img {
+    width: 100%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.laptop-details {
+    margin-bottom: 1rem;
+}
+
+.laptop-details h3 {
+    color: #0078D4;
+    margin-bottom: 0.5rem;
+}
+
+.buy-btn {
+    display: inline-block;
+    background-color: #0078D4;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.buy-btn:hover {
+    background-color: #005ea6;
+}
+
+
+  details {
+    margin-top: 1rem;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    color: #333;
+}
+
+details summary {
+    font-weight: bold;
+    color: #0078D4;
+    cursor: pointer;
+}
+
+details[open] summary {
+    color: #005ea6;
+}
+
+details summary:hover {
+    text-decoration: underline;
+}

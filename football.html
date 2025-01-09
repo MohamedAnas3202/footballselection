@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Player Registration</title>
+    <link rel="stylesheet" href="footballselection.css">
+    <style>
+
+    body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+            background-size: cover;  
+            background-position: center; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        
+        }
+
+        header {
+            background-image: url('footballimage2.jpg'); 
+            background: linear-gradient(135deg, #2e7d32, #1b5e20, #388e3c, #a5d6a7);
+            background-color: #283593;
+            color: rgb(44, 33, 33);
+            padding: 40px 0;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            background-image: url('foootball_image.jpg'); 
+            align-items: center;
+            min-height: 100vh;
+            background-color: #e0e7ff;
+            
+        }
+
+        .form-container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+            margin: 20px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #283593;
+            margin-bottom: 25px;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 1rem;
+            margin-top: 5px;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #283593;
+            outline: none;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            background-color: #283593;
+            color: white;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #1c3c75;
+            transform: scale(1.05);
+        }
+
+        .reset-btn {
+            background-color: #f44336;
+            color: white;
+            padding: 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .reset-btn:hover {
+            background-color: #d32f2f;
+            transform: scale(1.05);
+        }
+
+        small {
+            font-size: 0.9rem;
+            color: #777;
+            display: block;
+            margin-top: 5px;
+        }
+
+        input[type="file"] {
+            font-size: 1rem;
+            background-color: #f7f7f7;
+            padding: 12px;
+            display: block;
+            border-radius: 8px;
+            border: 2px solid #ccc;
+            width: 100%;
+        }
+
+        input[type="file"]:hover {
+            border-color: #283593;
+        }
+
+    
+        footer {
+            background-color: #283593;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+            margin-top: 40px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>⚽ Football Player Registration</h1>
+        <p>Fill in the form below to register as a football player and be a part of our team. Please provide accurate and detailed information.</p>
+    </header>
+
+    <main>
+        <section class="form-container">
+           <form id="registration-form" enctype="multipart/form-data">
+            
+                <h2>Player Information</h2>
+                
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="position">Position</label>
+                    <select id="position" name="position" required>
+                        <option value="forward">Forward</option>
+                        <option value="midfielder">Midfielder</option>
+                        <option value="defender">Defender</option>
+                        <option value="goalkeeper">Goalkeeper</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="team">Current Team</label>
+                    <input type="text" id="team" name="team" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="skills">Skills</label>
+                    <textarea id="skills" name="skills" rows="4" placeholder="List your key skills (e.g., ball control, passing, shooting, etc.)" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="photo">Player Photo</label>
+                    <input type="file" id="photo" name="photo" accept="image/*">
+                </div>
+                
+                <div class="form-group">
+                    <label for="experience">Football Experience</label>
+                    <textarea id="experience" name="experience" rows="4" placeholder="Describe your football experience (e.g., teams played for, years of play)" required></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="achievements">Achievements</label>
+                    <textarea id="achievements" name="achievements" rows="4" placeholder="Mention any major football achievements or honors" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="availability">Availability</label>
+                    <input type="text" id="availability" name="availability" placeholder="When are you available to play (e.g., weekdays, weekends, full-time)">
+                </div>
+
+              
+                <div class="form-group">
+                    <label for="certificates">Upload Certificates</label>
+                    <input type="file" id="certificates" name="certificates" accept=".pdf,.jpg,.jpeg,.png,.doc,.docx" multiple>
+                    <small>Upload any relevant certificates (e.g., coaching certifications, player achievements, etc.)</small>
+                </div>
+
+                
+                <div class="form-group">
+                    <label for="preferred-training-location">Preferred Training Location</label>
+                    <input type="text" id="preferred-training-location" name="preferred-training-location" placeholder="Enter preferred training location (e.g., local stadium, indoor facility)">
+                </div>
+
+                <div class="form-group">
+                    <label for="fitness-level">Fitness Level</label>
+                    <select id="fitness-level" name="fitness-level" required>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="medical-condition">Any Medical Conditions?</label>
+                    <textarea id="medical-condition" name="medical-condition" rows="3" placeholder="Please describe any medical conditions or concerns" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="submit-btn">Submit</button>
+                    <button type="reset" class="reset-btn">Reset</button>
+                </div>
+
+               
+                
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Football Club. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+document.getElementById('registration-form').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+    
+    const firstName = document.getElementById('first-name').value;
+    const lastName = document.getElementById('last-name').value;
+
+    const popupMessage = `Thank you, ${firstName} ${lastName}, for registering!`;
+    document.getElementById('popup-message').textContent = popupMessage;
+    document.getElementById('custom-popup').style.display = 'flex';
+    
+    event.target.reset();
+});
+
+function closePopup() {
+    document.getElementById('custom-popup').style.display = 'none';
+}
+
+</script>
+
+    </script>
+    
+
+</body>
+</html>
